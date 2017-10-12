@@ -50,8 +50,8 @@ if (WebTorrent.WEBRTC_SUPPORT) {
             var hash = getParameterByName('v');
 
             var noPeerFoundTimeout = setTimeout(function () {
-                id("line").innerHTML = "Movie not available at the moment. <a href='/'>Try another movie.</a>";
-            }, 22000);
+                id("line").innerHTML = "Movie not available at the moment. <a href='/'><br>Try another movie.</a>";
+            }, 12000);
 
             client.add(hash, { announce: trackers }, function (torrent) {
 
@@ -69,17 +69,17 @@ if (WebTorrent.WEBRTC_SUPPORT) {
 
                 document.title = "Cornflix - " + torrentname;
 
-                id("line").innerHTML = "Downloading <i>" + torrentname + "</i> <span id='down'>(0 KB/s)</span>";
+                id("line").innerHTML = torrentname;
 
                 var loadingInteval = setInterval(function () {
 
-                    id("down").innerHTML = "(" + bytes(torrent.downloadSpeed) + "/s)"
+                    id("line").innerHTML = "Downloading " + bytes(torrent.downloadSpeed) + "/s from " + torrent.numPeers + (torrent.numPeers === 1 ? " cornflix user" : " cornflix users");
 
                     id("loadingbar").style.width = Math.round(torrent.progress * 100 * 100) / 1.2 + "%";
 
-                    if (torrent.progress > 0.006) {
+                    if (torrent.progress > 0.008) {
 
-                        id("line").innerHTML = tip + "<span hidden id='down'></span>" ;
+                        id("line").innerHTML = tip ;
 
                     }
 
@@ -103,11 +103,14 @@ if (WebTorrent.WEBRTC_SUPPORT) {
 
                             id("player").removeAttribute("hidden");
 
+                        } else {
+
+                            id("line").innerHTML = "Error: Invalid file";
 
                         }
                     }
 
-                }, 1500);
+                }, 1700);
 
             });
 
@@ -122,9 +125,5 @@ if (WebTorrent.WEBRTC_SUPPORT) {
         location.assign("/");
 
     }
-
-} else {
-
-    id("line").innerHTML = "Your web browser is not compatible with Cornflix. <br> <a href='https://www.google.com/chrome/browser/desktop/index.html' target='_blank'>Install  Google Chrome</a>.";
 
 }
