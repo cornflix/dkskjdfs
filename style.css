@@ -76,18 +76,22 @@ body {
     font-size: 6rem;
     margin: 0; }
   #big #line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: auto;
     font-size: 0.85rem;
     color: white;
     margin: 1rem 0; }
-    #big #line #down {
-      margin-left: 0.3rem; }
+    #big #line #stats {
+      display: block;
+      margin-bottom: 0.3rem; }
 
 #loading {
   border: 1px solid #e50914;
   position: relative;
   display: block;
   overflow: hidden;
-  width: 100%;
   width: 98%;
   margin: auto;
   height: 0.7rem;
@@ -137,9 +141,9 @@ body {
       padding: 0.4rem;
       padding-top: 3rem;
       background-color: black;
-      background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), transparent);
-      background: -moz-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), transparent);
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), transparent);
+      background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+      background: -moz-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
       transition: opacity 0.2s ease-in-out; }
 
 #info {
