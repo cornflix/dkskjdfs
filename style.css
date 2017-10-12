@@ -1,0 +1,205 @@
+[hidden] {
+  display: none !important; }
+
+* {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box; }
+
+a {
+  color: white; }
+
+html {
+  color: #e50914;
+  font-family: 'Roboto', sans-serif;
+  background-color: #202020;
+  font-size: 19px;
+  padding: 0;
+  width: 100%; }
+
+body {
+  width: 45rem;
+  margin: auto;
+  margin-bottom: 4rem; }
+
+#header {
+  margin: 2rem 0; }
+
+#title {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 3rem; }
+
+#subtitle {
+  position: relative;
+  left: 0.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  margin: 0;
+  text-align: center;
+  color: white; }
+
+#player {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  #player #video {
+    width: 100%;
+    height: 100%;
+    background-color: black; }
+  #player .plyr--video, #player .plyr__video-wrapper {
+    height: 100%; }
+
+#big {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  #big h1 {
+    font-family: "Roboto Condensed";
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 5.5rem;
+    font-size: 6rem;
+    margin: 0; }
+  #big #line {
+    font-size: 0.85rem;
+    color: white;
+    margin: 1rem 0; }
+    #big #line #down {
+      margin-left: 0.3rem; }
+
+#loading {
+  border: 1px solid #e50914;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  width: 98%;
+  margin: auto;
+  height: 0.7rem;
+  left: 0.2rem; }
+  #loading #loadingbar {
+    display: block;
+    transition: width 2s;
+    background: #e50914;
+    width: 0;
+    height: 100%;
+    border-bottom: 3px solid #e50914; }
+
+#movies {
+  margin: auto; }
+  #movies a {
+    min-height: 7rem;
+    display: inline-block;
+    width: 10rem;
+    height: 14.72rem;
+    margin: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px; }
+    #movies a:hover {
+      opacity: 0.9;
+      border: 2px solid white;
+      transition: border 0.2s, opacity 0.2s; }
+    #movies a img {
+      display: block;
+      width: 100%;
+      margin: 0;
+      height: 100%; }
+    #movies a p {
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px black;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      font-size: 0.92rem;
+      padding: 0.4rem;
+      padding-top: 3rem;
+      background-color: black;
+      background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), transparent);
+      background: -moz-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), transparent);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), transparent);
+      transition: opacity 0.2s ease-in-out; }
+
+#info {
+  margin: 0 0 1rem;
+  text-align: center; }
+
+@media screen and (max-width: 900px) {
+  body {
+    width: 28rem; }
+
+  #movies a {
+    width: 8rem;
+    height: 11.78rem;
+    margin: 0.5rem; }
+
+  #big h1 {
+    font-size: 5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    margin-bottom: 0.4rem; } }
+@media screen and (max-width: 520px) {
+  body {
+    width: 96%;
+    margin: auto; }
+
+  #title {
+    font-size: 3rem; }
+
+  #movies a {
+    width: 46.5%;
+    margin: 1%;
+    height: auto;
+    min-height: 9.5rem; }
+
+  #subtitle {
+    display: none; }
+
+  #big h1 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.4rem; }
+
+  #line {
+    font-size: 0.8rem; } }
+#logo {
+  opacity: 0.4;
+  position: fixed;
+  top: 0.2rem;
+  left: 0;
+  right: 0;
+  color: #e50914;
+  text-decoration: none;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed";
+  z-index: 1000;
+  text-align: center;
+  transition: opacity 0.3s; }
+  #logo:hover {
+    opacity: 1; }
+
+/*# sourceMappingURL=style.css.map */
